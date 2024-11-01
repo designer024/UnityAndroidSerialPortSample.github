@@ -15,14 +15,15 @@ public class Utils {
         return sb.toString().toUpperCase();
     }
 
-    public static byte[] hexStringToByteArray(String hex) {
-        hex = hex.length() % 2 != 0 ? "0" + hex : hex;
 
-        byte[] b = new byte[hex.length() / 2];
+    public static byte[] hexStringToByteArray(String aHex) {
+        aHex = aHex.length() % 2 != 0 ? "0" + aHex : aHex;
+
+        byte[] b = new byte[aHex.length() / 2];
 
         for (int i = 0; i < b.length; i++) {
             int index = i * 2;
-            int v = Integer.parseInt(hex.substring(index, index + 2), 16);
+            int v = Integer.parseInt(aHex.substring(index, index + 2), 16);
             b[i] = (byte) v;
         }
         return b;

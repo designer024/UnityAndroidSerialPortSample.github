@@ -4,6 +4,7 @@ plugins {
 
 android {
     namespace 'com.ethanlin.serialportlib'
+    //noinspection GradleDependency
     compileSdk 33
 
     defaultConfig {
@@ -27,18 +28,19 @@ android {
 
 dependencies {
 
-    //noinspection GradleDependency
+    // noinspection UseTomlInstead,GradleDependency
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    //noinspection GradleDependency
+    // noinspection UseTomlInstead,GradleDependency
     implementation 'com.google.android.material:material:1.9.0'
 
     implementation files('libs/mik3y_UsbSerial_3.8.1.jar')
 
     compileOnly files('libs/classes.jar')
 
+    // noinspection UseTomlInstead,GradleDependency
     testImplementation 'junit:junit:4.13.2'
-    //noinspection GradleDependency
+    // noinspection UseTomlInstead,GradleDependency
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    //noinspection GradleDependency
+    // noinspection UseTomlInstead,GradleDependency
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
