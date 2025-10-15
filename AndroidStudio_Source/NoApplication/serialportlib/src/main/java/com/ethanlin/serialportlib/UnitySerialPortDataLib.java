@@ -164,6 +164,7 @@ public class UnitySerialPortDataLib {
                 if (aDataBytes != null && aDataBytes.length > 0) {
                     mSerialData = aDataBytes;
                     String dataString = Base64.encodeToString(mSerialData, Base64.DEFAULT);
+                    UnityPlayer.UnitySendMessage(GlobalConfig.UNITY_GAME_OBJECT_NAME, "onSerialDataReceived", dataString);
                     android.util.Log.d(GlobalConfig.DEBUG_TAG, String.format("onNewData: %s", dataString));
                 }
             }
