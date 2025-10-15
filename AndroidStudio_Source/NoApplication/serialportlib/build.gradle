@@ -33,7 +33,7 @@ dependencies {
     // noinspection UseTomlInstead,GradleDependency
     implementation 'com.google.android.material:material:1.9.0'
 
-    implementation files('libs/mik3y_UsbSerial_3.8.1.jar')
+    implementation files('libs/mik3y_UsbSerial_3.9.0.jar')
 
     compileOnly files('libs/classes.jar')
 
